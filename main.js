@@ -66,7 +66,7 @@ const pessoa = {
     conhecimentos: conhecimentos,
 }
     // notação //ponto
-        // variavél.propriedade
+        // variável.propriedade
 console.log(pessoa.nome);
 
 // através dos colchetes
@@ -79,7 +79,7 @@ console.log(pessoa['nome']);
 
     exibeAtributo('nome')
 
-    // alterar um atriburo
+    // alterar um atribuo
     pessoa['sobrenome'] = undefined;
 
     // congelar uma const
