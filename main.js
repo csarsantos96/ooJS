@@ -49,6 +49,9 @@ console.log(carroDoJoao2);
 
 
 
+
+// como acessar atributos dentro de um objeto
+
 const nome = "Cesar"
 const idade = 28
 const ehMaiorDeIdade =true
@@ -62,13 +65,40 @@ const pessoa = {
     ehMaiorDeIdade: ehMaiorDeIdade, 
     conhecimentos: conhecimentos,
 }
+    // notação //ponto
+        // variavél.propriedade
+console.log(pessoa.nome);
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof ehMaiorDeIdade);
-console.log(typeof conhecimentos);
-console.log(typeof pessoa);
+// através dos colchetes
+console.log(pessoa['nome']);
 
-console.log(carroDaMaria2 instanceof Carro);
-console.log(conhecimentos instanceof Carro) ;
+        //  atributo dinâmico
+    function exibeAtributo(nomeAtributo){
+        console.log(pessoa[nomeAtributo])
+    }
 
+    exibeAtributo('nome')
+
+    // alterar um atriburo
+    pessoa['sobrenome'] = undefined;
+
+    // congelar uma const
+    Object.freeze(pessoa);
+
+    pessoa.nome = 'joão';
+
+    if(pessoa['sobrenome']){
+        console.log("a pessoa tem um sobrenome")
+    }
+if ('sobrenome' in pessoa){
+    console.log('tem sobrenome')
+}
+
+console.log(pessoa.nome);
+console.log(pessoa['nome']);
+
+// transformar os atributos em um array com o nome dos atributos
+
+console.log(Object.keys(pessoa));
+console.log(Object.keys(pessoa).length);
+console.log(Object.values(pessoa));
